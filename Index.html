@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON Data</title>
+</head>
+<body>
+    <pre id="geojson-content"></pre>
+
+    <script>
+        // Load GeoJSON data using fetch
+        fetch('C:\Users\cnesbitt\OneDrive - CACI Ltd\Documents\Python\Map Files\Index.geojson')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('geojson-content').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON data:', error);
+            });
+    </script>
+</body>
+</html>
