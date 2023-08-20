@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON Data</title>
+</head>
+<body>
+    <pre id="geojson-content"></pre>
+
+    <script>
+        // Load GeoJSON data using fetch
+        fetch('C:\Users\cnesbitt\OneDrive - CACI Ltd\Documents\Python\Map Files\Index.geojson')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('geojson-content').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON data:', error);
+            });
+    </script>
+</body>
+</html>
+In this example, the content of the GeoJSON file will be displayed within a <pre> element.
+
+Commit and Deploy:
+Commit your changes to the GitHub repository and follow the deployment steps outlined in point 8 of the initial response to deploy your static website using GitHub Pages.
+
+With this setup, when someone visits your website's URL, they'll see the content of the GeoJSON file displayed as text on the webpage.
+
+Remember to adjust the fetch URL in the JavaScript code to point to the correct path of your GeoJSON file within your repository.
+
+
+
+
+
